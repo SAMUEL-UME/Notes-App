@@ -3,5 +3,15 @@ exports.homepage = async (req, res) => {
         title: 'Nodejs notes',
         description: 'Free Nodejs note app'
     }
-    res.render('index', locals)
+    res.render('index', {
+        locals,
+        layout: '../views/layouts/front-page'
+    })
+}
+exports.about = async (req, res) => {
+    const locals ={
+        title: 'About Nodejs notes',
+        description: 'Free Nodejs note app'
+    }
+    res.render('about', locals)
 }
